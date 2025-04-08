@@ -1,73 +1,95 @@
-
 body {
-    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif; 
-    background-color: #f4ecd5;
-    margin-top: 80px;
-    text-align: center;
-    color: #443e38;
+  background-color: #fff8dc;
+  font-family: 'Georgia', serif;
+  color: #2c2c2c;
 }
 
 header {
-    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif;
-    background-color: #a5896d;
-    color: #f4ecd5;
-    padding: 20px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    text-align: center;
+  background-color: #a48f77;
+  color: #fff8dc;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
 }
 
-.content-box {
-    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif; 
-    background-color: #d4acdf;
-    width: 75%;
-    margin: 40px auto;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 350px;
-    color: #443e38;
+.custom-navbar {
+  background-color: #2f2a25;
+}
+
+.custom-navbar .nav-link {
+  color: #fff8dc;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #d2b48c;
+}
+
+.custom-navbar .navbar-brand {
+  color: #fff8dc;
+  font-weight: bold;
+}
+
+.custom-navbar .form-control {
+  background-color: #fff8dc;
+  border-color: #ccc;
+  color: #2f2a25;
+}
+
+.custom-navbar .btn-outline-success {
+  border-color: #fff8dc;
+  color: #fff8dc;
+}
+
+.custom-navbar .btn-outline-success:hover {
+  background-color: #fff8dc;
+  color: #2f2a25;
+}
+
+.mission-wrapper {
+  max-width: 80%;
+  margin: 60px auto 0 auto;
 }
 
 .floating-box {
-    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif; 
-    background-color: #cdf4b2;
-    width: 75%;
-    position: absolute;
-    top: 300px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: #443e38;
+  background-color: #cdf4b2;
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .floating-box::before {
-    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif; 
-    content: "About Us";
-    background-color: #a2c4b6;
-    color: #443e38;
-    padding: 10px 20px;
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
+  content: "About Us";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #a2c4b6;
+  color: #2f2a25;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
 }
 
-p {
-    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif; 
-    text-align: center;
-    color: #443e38;
+.grid-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.box {
+  background-color: #f4ecd5;
+  height: 160px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
