@@ -1,0 +1,145 @@
+body {
+  background-color: #fff8dc;
+  font-family: 'Georgia', serif;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #a48f77;
+  color: #fff8dc;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: #2f2a25;
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: #fff8dc;
+  font-weight: bold;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #d2b48c;
+}
+
+.custom-navbar .form-control {
+  background-color: #fff8dc;
+  border-color: #ccc;
+  color: #2f2a25;
+}
+
+.custom-navbar .btn-outline-success {
+  border-color: #fff8dc;
+  color: #fff8dc;
+}
+
+.custom-navbar .btn-outline-success:hover {
+  background-color: #fff8dc;
+  color: #2f2a25;
+}
+
+/* Page Title (Lips Banner) */
+.page-title {
+  background-color: #f4ebb9;
+  color: #2c2c2c;
+  text-align: center;
+  font-size: 1.3rem; /* Changed font size to 1.3rem */
+  font-weight: bold; /* Made it bold */
+  margin: 40px auto 30px;
+  width: 400px; /* Match the width of the middle box */
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Container for the boxes - Use CSS Grid */
+.boxes-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 equal-width columns */
+  gap: 30px; /* Adds space between the boxes */
+  width: 80%; /* Same width as the page title */
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+}
+
+/* Style for each box */
+.box {
+  background-color: #f0bdbc;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Special Styling for the Middle Box */
+.middle-box {
+  background-color: #9e907a; /* Color of the middle box */
+  width: 400px; /* Increased width */
+  height: 400px; /* Increased height to make it much bigger */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-self: center; /* Center it horizontally within the grid */
+  align-self: center; /* Center it vertically within the grid */
+}
+
+/* Left and Right Boxes (make them shorter) */
+.left-box,
+.right-box {
+  background-color: #f0bdbc; /* Same as button background color */
+  color: #2c2c2c; /* Same as button text color */
+  font-weight: bold;
+  padding: 10px 30px; /* Adjusted padding */
+  border: none;
+  border-radius: 40px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  height: 50px; /* Set a fixed height for the boxes */
+  justify-self: center; /* Align horizontally */
+  align-self: center; /* Align vertically */
+  transition: transform 0.3s ease; /* Smooth transition when hover */
+}
+
+/* Adjusting grid column for each box */
+.left-box {
+  grid-column: 1; /* Place on the left */
+  transform: translateY(-50%) rotate(10deg); /* Tilt left box towards middle */
+}
+
+.middle-box {
+  grid-column: 2; /* Place in the middle */
+}
+
+.right-box {
+  grid-column: 3; /* Place on the right */
+  transform: translateY(-50%) rotate(-10deg); /* Tilt right box towards middle */
+}
+
+/* Hover effect to make them more pronounced */
+.left-box:hover {
+  transform: translateY(-50%) rotate(15deg); /* More tilt on hover */
+}
+
+.right-box:hover {
+  transform: translateY(-50%) rotate(-15deg); /* More tilt on hover */
+}
