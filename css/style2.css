@@ -143,3 +143,8 @@ header {
 .right-box:hover {
   transform: translateY(-50%) rotate(-15deg); /* More tilt on hover */
 }
+/* Remove underline from linked boxes */
+.left-box, .right-box {
+  text-decoration: none;
+  color: inherit; /* Keeps the text color consistent */
+}

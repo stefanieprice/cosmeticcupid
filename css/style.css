@@ -92,4 +92,16 @@ header {
   align-items: center;
   font-weight: bold;
   font-size: 1.2rem;
+  transition: all 0.3s ease; 
 }
+
+.box:hover {
+  background-color: #f0bdbc; 
+  transform: scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.box:active {
+  transform: scale(1); 
+}
+
