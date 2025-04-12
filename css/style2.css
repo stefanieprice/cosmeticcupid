@@ -6,7 +6,6 @@ body {
   padding: 0;
 }
 
-/* Header */
 header {
   background-color: #a48f77;
   color: #fff8dc;
@@ -15,7 +14,6 @@ header {
   font-size: 1.8rem;
 }
 
-/* Navbar */
 .custom-navbar {
   background-color: #2f2a25;
 }
@@ -46,32 +44,28 @@ header {
   color: #2f2a25;
 }
 
-/* Page Title (Lips Banner) */
 .page-title {
   background-color: #f4ebb9;
   color: #2c2c2c;
   text-align: center;
-  font-size: 1.3rem; /* Changed font size to 1.3rem */
-  font-weight: bold; /* Made it bold */
+  font-size: 1.3rem;
+  font-weight: bold;
   margin: 40px auto 30px;
-  width: 400px; /* Match the width of the middle box */
+  width: 400px;
   padding: 10px 0;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Container for the boxes - Use CSS Grid */
 .boxes-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 equal-width columns */
-  gap: 30px; /* Adds space between the boxes */
-  width: 80%; /* Same width as the page title */
-  margin: 0 auto;
-  margin-top: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  width: 80%;
+  margin: 30px auto 0;
   position: relative;
 }
 
-/* Style for each box */
 .box {
   background-color: #f0bdbc;
   padding: 30px;
@@ -85,26 +79,24 @@ header {
   align-items: center;
 }
 
-/* Special Styling for the Middle Box */
 .middle-box {
-  background-color: #9e907a; /* Color of the middle box */
-  width: 400px; /* Increased width */
-  height: 400px; /* Increased height to make it much bigger */
+  background-color: #9e907a;
+  width: 400px;
+  height: 400px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  justify-self: center; /* Center it horizontally within the grid */
-  align-self: center; /* Center it vertically within the grid */
+  justify-self: center;
+  align-self: center;
+  grid-column: 2;
 }
 
-/* Left and Right Boxes (make them shorter) */
 .left-box,
 .right-box {
-  background-color: #f0bdbc; /* Same as button background color */
-  color: #2c2c2c; /* Same as button text color */
+  background-color: #f0bdbc;
+  color: #2c2c2c;
   font-weight: bold;
-  padding: 10px 30px; /* Adjusted padding */
-  border: none;
-  border-radius: 40px; /* Rounded corners */
+  padding: 10px 30px;
+  border-radius: 40px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 1.2rem;
   text-align: center;
@@ -114,37 +106,29 @@ header {
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
-  height: 50px; /* Set a fixed height for the boxes */
-  justify-self: center; /* Align horizontally */
-  align-self: center; /* Align vertically */
-  transition: transform 0.3s ease; /* Smooth transition when hover */
+  height: 50px;
+  justify-self: center;
+  align-self: center;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Adjusting grid column for each box */
 .left-box {
-  grid-column: 1; /* Place on the left */
-  transform: translateY(-50%) rotate(10deg); /* Tilt left box towards middle */
-}
-
-.middle-box {
-  grid-column: 2; /* Place in the middle */
+  grid-column: 1;
+  transform: translateY(-50%) rotate(10deg);
 }
 
 .right-box {
-  grid-column: 3; /* Place on the right */
-  transform: translateY(-50%) rotate(-10deg); /* Tilt right box towards middle */
+  grid-column: 3;
+  transform: translateY(-50%) rotate(-10deg);
 }
 
-/* Hover effect to make them more pronounced */
 .left-box:hover {
-  transform: translateY(-50%) rotate(15deg); /* More tilt on hover */
+  transform: translateY(-50%) rotate(15deg);
 }
 
 .right-box:hover {
-  transform: translateY(-50%) rotate(-15deg); /* More tilt on hover */
+  transform: translateY(-50%) rotate(-15deg);
 }
-/* Remove underline from linked boxes */
-.left-box, .right-box {
-  text-decoration: none;
-  color: inherit; /* Keeps the text color consistent */
-}
+
