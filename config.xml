@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="com.cosmetic.cupid" version="1.0.0"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:gap="http://phonegap.com/ns/1.0">
+
+  <name>CosmeticCupid</name>
+  <description>
+    cosmetic cupid
+  </description>
+  <author email="price361@purdue.edu" href="https://github.com/stefanieprice">
+    poo
+  </author>
+
+  <content src="index.html" />
+  <access origin="*" />
+  <preference name="orientation" value="portrait" />
+  <preference name="fullscreen" value="true" />
+
+  <plugin name="cordova-plugin-whitelist" />
+  <allow-navigation href="*" />
+</widget>
