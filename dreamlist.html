@@ -36,18 +36,35 @@
       </div>
     </div>
   </nav>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge>
-      <meta name="viewport" content="width=device-width, initial-scale=45.0">
-    <title>Web Form</title>
-  </head>
+  
+<head>
+  <meta charset="UTF-8">
+  <title>Save Text Box Input</title>
+</head>
 <body>
-  <form action="/url" method="GET"
-  <p>Write Your Dream List Below!</p>
-  <input type="text">
-</form>
+  <h2>Write your Dream List!:</h2>
+  <textarea id="myTextBox" rows="5" cols="40"></textarea>
+  <br>
+  <button onclick="saveText()">Save</button>
+
+  <script>
+    // Load saved text when the page loads
+    window.onload = function() {
+      const savedText = localStorage.getItem("userText");
+      if (savedText) {
+        document.getElementById("myTextBox").value = savedText;
+      }
+    };
+
+    // Save text when button is clicked
+    function saveText() {
+      const userInput = document.getElementById("myTextBox").value;
+      localStorage.setItem("userText", userInput);
+      alert("Text saved!");
+    }
+  </script>
 </body>
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
