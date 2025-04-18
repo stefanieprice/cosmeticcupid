@@ -27,6 +27,8 @@
     .dream-box:hover { background-color: #e6a6a6; transform: scale(1.05); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); }
   </style>
 </head>
+<body>
+
   <header>
     <h1>Welcome to Cosmetic Cupid! Let us help you find your perfect match.</h1>
   </header>
@@ -47,22 +49,10 @@
           <li class="nav-item"><a class="nav-link" href="highend.html">High-end</a></li>
           <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
         </ul>
-        <head>
-          <style>
-           header { background-color: #a48f77; color: #fff8dc; padding: 20px; text-align: center; font-size: 1.8rem; }
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web form</title>
-</head>
-<body>
-    <form action="/url" method="GET">
-            <p> NAME</p>
-        <input type="text" name="first_name" placeholder="Your Name!" required>
-        <button type="submit">Submit</button>  
-    </form>
-</body>
-            </style>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </nav>
