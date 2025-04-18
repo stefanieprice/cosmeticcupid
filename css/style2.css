@@ -131,3 +131,47 @@ header {
 .right-box:hover {
   transform: translateY(-50%) rotate(-15deg);
 }
+.custom-box {
+  background-color: #abc3b7;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dream-textbox {
+  background-color: #fcf8df;
+  color: #2e2a26;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: none;
+  resize: vertical;
+}
+
+.dream-heading {
+  color: #2c2c2c;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 20px auto 30px; 
+}
+.save-button {
+  background-color: #fff8dc; 
+  color: #2e2a26; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: block;
+  margin: 20px auto 0; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #f4ebb9;
+}
