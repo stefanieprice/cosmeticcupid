@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cosmetic Cupid - Thanks </title>
+  <title>Cosmetic Cupid - Dream List </title>
   <link rel="icon" type="image/png" href="images/icon.png" sizes="32x32">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style2.css">
@@ -36,19 +36,17 @@
       </div>
     </div>
   </nav>
-  
-<head>
-  <meta charset="UTF-8">
-  <title>Save Text Box Input</title>
-</head>
-<body>
-  <h2>Write your Dream List!:</h2>
-  <textarea id="myTextBox" rows="5" cols="40"></textarea>
-  <br>
-  <button onclick="saveText()">Save</button>
+
+  <div class="container mt-5">
+    <div class="custom-box">
+      <h2 class="dream-heading">Write your Dream List! &#9829</h2>
+      <textarea id="myTextBox" rows="5" cols="40" class="dream-textbox"></textarea>
+      <br>
+      <button class="save-button" onclick="saveText()">Save</button>
+    </div>
+  </div>
 
   <script>
-    // Load saved text when the page loads
     window.onload = function() {
       const savedText = localStorage.getItem("userText");
       if (savedText) {
@@ -56,15 +54,18 @@
       }
     };
 
-    // Save text when button is clicked
     function saveText() {
       const userInput = document.getElementById("myTextBox").value;
-      localStorage.setItem("userText", userInput);
-      alert("Text saved!");
+      if (userInput.trim() !== '') {
+        localStorage.setItem("userText", userInput);
+        alert("Text saved!");
+      } else {
+        alert("Please enter something before saving.");
+      }
     }
   </script>
-</body>
- 
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
