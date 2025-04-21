@@ -49,32 +49,40 @@
           <li class="nav-item"><a class="nav-link" href="highend.html">High-end</a></li>
           <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
         </ul>
-      <div class="d-flex" role="form">
+     <div class="d-flex align-items-center" style="gap: 0.5rem;">
   <input
-    class="form-control me-2"
+    id="myTextBox"
+    class="form-control"
     type="text"
     placeholder="Your Name"
     aria-label="Name"
-    id="myTextBox"
+    style="max-width: 150px;"
   />
-  <button class="btn btn-primary" type="button" onclick="saveText()">Save</button>
+  <button
+    type="button"
+    class="btn btn-outline-light"
+    onclick="saveText()"
+  >
+    Save
+  </button>
 </div>
 
 <script>
-  window.onload = function () {
+  window.addEventListener("DOMContentLoaded", () => {
     const savedText = localStorage.getItem("userText");
     if (savedText) {
       document.getElementById("myTextBox").value = savedText;
     }
-  };
+  });
 
   function saveText() {
-    const userInput = document.getElementById("myTextBox").value;
-    if (userInput.trim() !== "") {
-      localStorage.setItem("userText", userInput);
-      alert("Text saved!");
+    const input = document.getElementById("myTextBox");
+    const value = input.value.trim();
+    if (value) {
+      localStorage.setItem("userText", value);
+      alert("Name saved!");
     } else {
-      alert("Please enter something before saving.");
+      alert("Please enter your name first.");
     }
   }
 </script>
