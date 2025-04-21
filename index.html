@@ -50,30 +50,10 @@
           <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
         </ul>
         <form class="d-flex" role="Name">
-          <input class="form-control me-2" type="Your name" placeholder="Your Name" aria-label="Name">
-            <button class="save-button" onclick="saveText()">Save</button> 
-          <script>
-    window.onload = function() {
-      const savedText = localStorage.getItem("userText");
-      if (savedText) {
-        document.getElementById("myTextBox").value = savedText;
-      }
-    };
-
-    function saveText() {
-      const userInput = document.getElementById("myTextBox").value;
-      if (userInput.trim() !== '') {
-        localStorage.setItem("userText", userInput);
-        alert("Text saved!");
-      } else {
-        alert("Please enter something before saving.");
-      }
-    }
-  </script>
-        </form>
-      </div>
-    </div>
-  </nav>
+  <input class="form-control me-2" id="myTextBox" type="text" placeholder="Your Name" aria-label="Name">
+  <button type="button" class="save-button btn btn-outline-success" onclick="saveText()">Save</button>
+</form>
+<p id="welcomeMessage" style="margin-top: 10px;"></p>
 
 
   <div class="container mt-5 mission-wrapper">
