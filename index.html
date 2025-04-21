@@ -49,26 +49,31 @@
           <li class="nav-item"><a class="nav-link" href="highend.html">High-end</a></li>
           <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
         </ul>
-        // save name to local storage and update it dynamically
-        function saveName() {
-    const nameBar = document.getElementById('nameBar');
-    const displayName = document.getElementById('displayName');
+      <form class="d-flex" role="Name">
+          <input class="form-control me-2" type="Your name" placeholder="Your Name" aria-label="Name">
+            <button class="save-button" onclick="saveText()">Save</button> 
+          <script>
+    window.onload = function() {
+      const savedText = localStorage.getItem("userText");
+      if (savedText) {
+        document.getElementById("myTextBox").value = savedText;
+      }
+    };
 
-    // Save the name in localStorage
-    const name = nameBar.value;
-    localStorage.setItem('savedName', name);
-
-    // Display the name without reloading the page
-    displayName.textContent = `Hello, ${name}!`;
-}
-
-// Load the name when the page is loaded
-window.onload = function() {
-    const savedName = localStorage.getItem('savedName');
-    if (savedName) {
-        document.getElementById('displayName').textContent = `Hello, ${savedName}!`;
+    function saveText() {
+      const userInput = document.getElementById("myTextBox").value;
+      if (userInput.trim() !== '') {
+        localStorage.setItem("userText", userInput);
+        alert("Text saved!");
+      } else {
+        alert("Please enter something before saving.");
+      }
     }
-};
+  </script>
+        </form>
+      </div>
+    </div>
+  </nav>
 
   <div class="container mt-5 mission-wrapper">
     <div class="floating-box">
