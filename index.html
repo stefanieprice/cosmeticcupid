@@ -49,31 +49,36 @@
           <li class="nav-item"><a class="nav-link" href="highend.html">High-end</a></li>
           <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
         </ul>
-        <form class="d-flex" role="Name">
-          <input class="form-control me-2" type="Your name" placeholder="Your Name" aria-label="Name">
-            <button class="save-button" onclick="saveText()">Save</button> 
-          <script>
-    window.onload = function() {
-      const savedText = localStorage.getItem("userText");
-      if (savedText) {
-        document.getElementById("myTextBox").value = savedText;
-      }
-    };
+        <form class="d-flex" role="form" onsubmit="saveText(event)">
+  <input
+    class="form-control me-2"
+    type="text"
+    placeholder="Your Name"
+    aria-label="Name"
+    id="myTextBox"
+  />
+  <button class="save-button" type="submit">Save</button>
+</form>
 
-    function saveText() {
-      const userInput = document.getElementById("myTextBox").value;
-      if (userInput.trim() !== '') {
-        localStorage.setItem("userText", userInput);
-        alert("Text saved!");
-      } else {
-        alert("Please enter something before saving.");
-      }
+<script>
+  window.onload = function () {
+    const savedText = localStorage.getItem("userText");
+    if (savedText) {
+      document.getElementById("myTextBox").value = savedText;
     }
-  </script>
-        </form>
-      </div>
-    </div>
-  </nav>
+  };
+
+  function saveText(event) {
+    event.preventDefault(); // Stops form from reloading the page
+    const userInput = document.getElementById("myTextBox").value;
+    if (userInput.trim() !== "") {
+      localStorage.setItem("userText", userInput);
+      alert("Text saved!");
+    } else {
+      alert("Please enter something before saving.");
+    }
+  }
+</script>
 
   <div class="container mt-5 mission-wrapper">
     <div class="floating-box">
