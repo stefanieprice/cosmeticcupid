@@ -49,11 +49,33 @@
           <li class="nav-item"><a class="nav-link" href="highend.html">High-end</a></li>
           <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
         </ul>
-        <form class="d-flex" role="Name">
-  <input class="form-control me-2" id="myTextBox" type="text" placeholder="Your Name" aria-label="Name">
-  <button type="button" class="save-button btn btn-outline-success" onclick="saveText()">Save</button>
-</form>
-<p id="welcomeMessage" style="margin-top: 10px;"></p>
+        <script>
+  // When the page loads, retrieve and display the saved name
+  window.onload = function() {
+    const savedName = localStorage.getItem("userName");
+    const welcomeMessage = document.getElementById("welcomeMessage");
+    const inputBox = document.getElementById("myTextBox");
+
+    if (savedName) {
+      welcomeMessage.textContent = `Welcome, ${savedName}!`;
+      inputBox.value = savedName; // Pre-fill the input box with the saved name
+    }
+  };
+
+  // Save the name to localStorage and display a message
+  function saveText() {
+    const userInput = document.getElementById("myTextBox").value.trim();
+    const welcomeMessage = document.getElementById("welcomeMessage");
+
+    if (userInput !== '') {
+      localStorage.setItem("userName", userInput);
+      welcomeMessage.textContent = `Welcome, ${userInput}!`;
+      alert("Name saved!");
+    } else {
+      alert("Please enter a name before saving.");
+    }
+  }
+</script>
 
 
   <div class="container mt-5 mission-wrapper">
