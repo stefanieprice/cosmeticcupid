@@ -49,34 +49,31 @@
           <li class="nav-item"><a class="nav-link" href="highend.html">High-end</a></li>
           <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
         </ul>
-        <script>
-  // When the page loads, retrieve and display the saved name
-  window.onload = function() {
-    const savedName = localStorage.getItem("userName");
-    const welcomeMessage = document.getElementById("welcomeMessage");
-    const inputBox = document.getElementById("myTextBox");
+        <form class="d-flex" role="Name">
+          <input class="form-control me-2" type="Your name" placeholder="Your Name" aria-label="Name">
+            <button class="save-button" onclick="saveText()">Save</button> 
+          <script>
+    window.onload = function() {
+      const savedText = localStorage.getItem("userText");
+      if (savedText) {
+        document.getElementById("myTextBox").value = savedText;
+      }
+    };
 
-    if (savedName) {
-      welcomeMessage.textContent = `Welcome, ${savedName}!`;
-      inputBox.value = savedName; // Pre-fill the input box with the saved name
+    function saveText() {
+      const userInput = document.getElementById("myTextBox").value;
+      if (userInput.trim() !== '') {
+        localStorage.setItem("userText", userInput);
+        alert("Text saved!");
+      } else {
+        alert("Please enter something before saving.");
+      }
     }
-  };
-
-  // Save the name to localStorage and display a message
-  function saveText() {
-    const userInput = document.getElementById("myTextBox").value.trim();
-    const welcomeMessage = document.getElementById("welcomeMessage");
-
-    if (userInput !== '') {
-      localStorage.setItem("userName", userInput);
-      welcomeMessage.textContent = `Welcome, ${userInput}!`;
-      alert("Name saved!");
-    } else {
-      alert("Please enter a name before saving.");
-    }
-  }
-</script>
-
+  </script>
+        </form>
+      </div>
+    </div>
+  </nav>
 
   <div class="container mt-5 mission-wrapper">
     <div class="floating-box">
