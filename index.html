@@ -49,19 +49,26 @@
           <li class="nav-item"><a class="nav-link" href="highend.html">High-end</a></li>
           <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
         </ul>
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmetic Cupid</title>
-</head>
-<body>
-    <!-- Name Input Bar -->
-    <input type="text" id="nameBar" placeholder="Enter your name" />
-    <button onclick="saveName()">Save Name</button>
-    <p id="displayName"></p>
+        // save name to local storage and update it dynamically
+        function saveName() {
+    const nameBar = document.getElementById('nameBar');
+    const displayName = document.getElementById('displayName');
 
-    <script src="script.js"></script>
-</body>
+    // Save the name in localStorage
+    const name = nameBar.value;
+    localStorage.setItem('savedName', name);
+
+    // Display the name without reloading the page
+    displayName.textContent = `Hello, ${name}!`;
+}
+
+// Load the name when the page is loaded
+window.onload = function() {
+    const savedName = localStorage.getItem('savedName');
+    if (savedName) {
+        document.getElementById('displayName').textContent = `Hello, ${savedName}!`;
+    }
+};
 
   <div class="container mt-5 mission-wrapper">
     <div class="floating-box">
