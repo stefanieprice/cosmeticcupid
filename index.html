@@ -49,31 +49,19 @@
           <li class="nav-item"><a class="nav-link" href="highend.html">High-end</a></li>
           <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
         </ul>
-        <form class="d-flex" role="Name">
-          <input class="form-control me-2" type="Your name" placeholder="Your Name" aria-label="Name">
-            <button class="save-button" onclick="saveText()">Save</button> 
-          <script>
-    window.onload = function() {
-      const savedText = localStorage.getItem("userText");
-      if (savedText) {
-        document.getElementById("myTextBox").value = savedText;
-      }
-    };
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetic Cupid</title>
+</head>
+<body>
+    <!-- Name Input Bar -->
+    <input type="text" id="nameBar" placeholder="Enter your name" />
+    <button onclick="saveName()">Save Name</button>
+    <p id="displayName"></p>
 
-    function saveText() {
-      const userInput = document.getElementById("myTextBox").value;
-      if (userInput.trim() !== '') {
-        localStorage.setItem("userText", userInput);
-        alert("Text saved!");
-      } else {
-        alert("Please enter something before saving.");
-      }
-    }
-  </script>
-        </form>
-      </div>
-    </div>
-  </nav>
+    <script src="script.js"></script>
+</body>
 
   <div class="container mt-5 mission-wrapper">
     <div class="floating-box">
