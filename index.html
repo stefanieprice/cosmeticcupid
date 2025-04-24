@@ -58,14 +58,14 @@
     aria-label="Name"
     style="max-width: 150px;"
   />
-  <button
-    type="button"
-    class="btn btn-outline-success"
-    onclick="saveText()"
-  >
-    Save
-  </button>
-</div>
+<button
+  type="button"
+  class="btn btn-outline-success"
+  onclick="saveName()"
+>
+  Save
+</button>
+
         
         </form>
       </div>
@@ -95,22 +95,23 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const savedText = localStorage.getItem("userName");
-    if (savedText) {
-      document.getElementById("NameInput").value = savedText;
-    }
-  });
-
-  function saveName() {
-    const userInput = document.getElementById("NameInput").value;
-    if (userInput.trim() !== '') {
-      localStorage.setItem("userText", userInput);
-      alert("Name saved!");
-    } else {
-      alert("Please enter something before saving.");
-    }
+ window.addEventListener("DOMContentLoaded", () => {
+  const savedText = localStorage.getItem("userName");
+  if (savedText) {
+    document.getElementById("nameInput").value = savedText;
   }
+});
+
+function saveName() {
+  const userInput = document.getElementById("nameInput").value;
+  if (userInput.trim() !== '') {
+    localStorage.setItem("userName", userInput); // Fixed key name
+    alert("Name saved!");
+  } else {
+    alert("Please enter something before saving.");
+  }
+}
+
 </script>
 </body>
-</html>
+</html
