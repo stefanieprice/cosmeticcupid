@@ -2,33 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cosmetic Cupid - Home</title>
-  <link rel="icon" type="image/png" href="images/icon.png" sizes="32x32">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <style>
-    body { background-color: #fff8dc; font-family: 'Georgia', serif; color: #2c2c2c; }
-    header { background-color: #a48f77; color: #fff8dc; padding: 20px; text-align: center; font-size: 1.8rem; }
-    .custom-navbar { background-color: #2f2a25; }
-    .custom-navbar .nav-link { color: #fff8dc; font-weight: bold; padding: 10px 15px; }
-    .custom-navbar .nav-link:hover { color: #d2b48c; }
-    .custom-navbar .navbar-brand { color: #fff8dc; font-weight: bold; }
-    .custom-navbar .form-control { background-color: #fff8dc; border-color: #ccc; color: #2f2a25; }
-    .custom-navbar .btn-outline-success { border-color: #fff8dc; color: #fff8dc; }
-    .custom-navbar .btn-outline-success:hover { background-color: #fff8dc; color: #2f2a25; }
-    .mission-wrapper { max-width: 80%; margin: 60px auto 0 auto; }
-    .floating-box { background-color: #cdf4b2; padding: 40px; border-radius: 10px; position: relative; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-    .floating-box::before { content: "About Us"; position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background-color: #a2c4b6; color: #2f2a25; padding: 10px 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); font-weight: bold; }
-    .grid-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
-    .box { background-color: #f4ecd5; height: 160px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 1.2rem; transition: all 0.3s ease; text-decoration: none !important; color: #2c2c2c !important; }
-    .box:hover { background-color: #f0bdbc; transform: scale(1.05); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); }
-    .box:active { transform: scale(1); }
-    .dream-box { background-color: #f0bdbc; padding: 40px; border-radius: 10px; text-align: center; font-size: 1.4rem; font-weight: bold; text-transform: uppercase; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; display: block; text-decoration: none !important; color: #2c2c2c !important; }
-    .dream-box:hover { background-color: #e6a6a6; transform: scale(1.05); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); }
-  </style>
+  <title>Cosmetic Cupid - Blush</title>
+  <link rel="icon" type="image/png" href="images/icon.png" sizes="32x32">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
 </head>
 <body>
-
   <header>
     <h1>Welcome to Cosmetic Cupid! Let us help you find your perfect match.</h1>
   </header>
@@ -49,28 +27,14 @@
           <li class="nav-item"><a class="nav-link" href="highend.html">High-end</a></li>
           <li class="nav-item"><a class="nav-link" href="dreamlist.html">Dream List</a></li>
         </ul>
-     <div class="d-flex align-items-center">
-  <input
-    id="nameInput"
-    class="form-control me-2"
-    type="text"
-    placeholder="Your Name"
-    aria-label="Name"
-    style="max-width: 150px;"
-  />
-<button
-  type="button"
-  class="btn btn-outline-success"
-  onclick="saveName()"
->
-  Save
-</button>
-
-        
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
+
   <div class="page-title" style="background-color: #f0bdbc;">Blush &#9733;</div>
 
   <div class="boxes-container">
